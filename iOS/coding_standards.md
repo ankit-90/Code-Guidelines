@@ -103,7 +103,7 @@ if (user.isHappy) {
 }
 ```
 
-Not Preferred :
+**Not Preferred :**
 
 ```objective-c
 
@@ -210,7 +210,7 @@ remove:
 
 * Long, descriptive method and variable names are good.
 
-**Preferred :- **
+**Preferred :-**
 
 ``` objective-c
 
@@ -445,7 +445,7 @@ Example :-
 
 ```
 
-Not Preferred -
+**Not Preferred -**
 
 ``` objective-c
 
@@ -500,7 +500,7 @@ NSNumber *buildingStreetNumber = @10018;
 
 ```
 
-Not Preferred:
+**Not Preferred:**
 
 ``` objective-c
 
@@ -522,7 +522,7 @@ static NSString * const ZBTAboutViewControllerCompanyName = @"Zapbuild";
 static CGFloat const ZBTImageThumbnailHeight = 50.0;
 ```
 
-Not Preferred:
+**Not Preferred:**
 
 ``` objective-c
 #define CompanyName @"Zapbuild"
@@ -609,7 +609,7 @@ if (isAwesome == true) {} // Never do this.
 }
 ```
 
-Not Preferred:
+**Not Preferred:**
 
 ``` objective-c
 
@@ -625,7 +625,7 @@ Not Preferred:
 ## 1.19. Error Handling
 * When methods return an error parameter by reference, switch on the returned value, not the error variable.
 
-For example:
+**For example:**
 
 ``` objective-c
 
@@ -636,7 +636,7 @@ if (![self trySomethingWithError:&error]) {
 
 ```
 
-Not:
+**Not:**
 
 ``` objective-c
 
@@ -667,7 +667,7 @@ CGFloat width = CGRectGetWidth(frame);
 CGFloat height = CGRectGetHeight(frame);
 ```
 
-Not Preferred :
+**Not Preferred :**
 
 ``` objective-c
 CGRect frame = self.view.frame;
