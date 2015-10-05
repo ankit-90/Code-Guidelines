@@ -9,7 +9,7 @@ Code should be grouped not only by type, but also by feature for greater clarity
 
 ## 1.2 Code Organization
 
-Use #pragma mark - to categorize methods in functional groupings and protocol/delegate implementations following this general structure.
+Use **#pragma mark** - to categorize methods in functional groupings and protocol/delegate implementations following this general structure.
 
 ```objective-c
 #pragma mark - Lifecycle
@@ -63,7 +63,7 @@ Use #pragma mark - to categorize methods in functional groupings and protocol/de
 If there is more than one import statement, group the statements together. Commenting each group is optional.
 For modules use the @import syntax.
 
-Example :
+**Example :**
 
 ```objective-c
 
@@ -324,7 +324,7 @@ Not Preferred :-
 
 * If the method describes two separate actions, use “and” to link them.
 
-Example :-
+**Example :-**
 
 ``` objective-c
 - (BOOL)openFile:(NSString *)fullPath withApplication:(NSString *)appName andDeactivate:(BOOL)flag;
@@ -340,7 +340,7 @@ Example :-
 - (void)setNoun:(type)aNoun;
 ```
 
-Example :-
+**Example :-**
 ```	
 	- (NSString *)title;
 	- (void)setTitle:(NSString *)aTitle;
