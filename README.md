@@ -1,5 +1,5 @@
 # Code-Guidelines
-Guidelines for developing iOS and Android based apps 
+Guidelines for developing Android and iOS based apps 
 
 [Android GuideLines](Android/android.md)
 
