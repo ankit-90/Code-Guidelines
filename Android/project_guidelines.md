@@ -26,6 +26,14 @@ New projects should follow the Android Gradle project structure that is defined 
 	* model	 
 * util
 
+Follow MVP pattern
+------
+![MVP diagram](assets/mvp.png)
+
+Clean Code Architecture
+--------
+![Clean diagram](assets/clean.png)
+
 ## 1.3 File naming 
 
 ### 1.3.1 Class files
