@@ -9,7 +9,7 @@ Code should be grouped not only by type, but also by feature for greater clarity
 
 ## 1.2 Code Organization
 
-Use #pragma mark - to categorize methods in functional groupings and protocol/delegate implementations following this general structure.
+Use **#pragma mark** - to categorize methods in functional groupings and protocol/delegate implementations following this general structure.
 
 ```objective-c
 #pragma mark - Lifecycle
@@ -63,7 +63,7 @@ Use #pragma mark - to categorize methods in functional groupings and protocol/de
 If there is more than one import statement, group the statements together. Commenting each group is optional.
 For modules use the @import syntax.
 
-Example :
+**Example :**
 
 ```objective-c
 
@@ -92,7 +92,7 @@ Example :
 
 * Use Uncrustify Xcode plugin for standard code spacing
 
-Preferred :
+**Preferred :**
 
 ```objective-c
 
@@ -103,7 +103,7 @@ if (user.isHappy) {
 }
 ```
 
-Not Preferred :
+**Not Preferred :**
 
 ```objective-c
 
@@ -191,7 +191,7 @@ Naming Convention plays very important role while writing up the code. Major Poi
 
 * Be clear and brief while naming classes, objects, variables etc.
 
-Preferred :- 
+**Preferred :- **
 
 ``` objective-c
 
@@ -200,7 +200,7 @@ removeObjectAtIndex:
 removeObject:
 ```
 
-Not Preferred :- 
+**Not Preferred :- **
 
 ``` objective-c
 
@@ -210,14 +210,14 @@ remove:
 
 * Long, descriptive method and variable names are good.
 
-Preferred :- 
+**Preferred :-**
 
 ``` objective-c
 
 UIButton *settingsButton;
 ```
 
-Not Preferred :-
+**Not Preferred :-**
 
 ``` objective-c
 
@@ -239,7 +239,7 @@ We will be using Project Initials for the respective project or (Zapbuild Techno
 
 * Avoid the use of the underscore character as a prefix meaning private in method names
 
-Preferred :- 
+**Preferred :- **
 
 ``` objective-c
 ZBTLoginViewController
@@ -249,7 +249,7 @@ ZBTConstantBaseURL
 static NSTimeInterval const ZBTLoginViewControllerNavigationFadeAnimationDuration = 0.3;
 ````
 
-Not Preferred :-
+**Not Preferred :-**
 
 ``` objective-c
 LoginVC
@@ -282,13 +282,13 @@ a) Methods (except Categories and Swizzling)
 
 * Use keywords before all arguments
 
-Preferred :-
+**Preferred :-**
 
 ``` objective-c
 - (void)sendAction:(SEL)aSelector toObject:(id)anObject forAllCells:(BOOL)flag;
 ```
 
-Not Preferred :-
+**Not Preferred :-**
 
 ``` objective-c
 - (void)sendAction:(SEL)aSelector :(id)anObject :(BOOL)flag;
@@ -296,13 +296,13 @@ Not Preferred :-
 
 * Make the word before the argument describe the argument
 
-Preferred :-
+**Preferred :-**
 
 ``` objective-c
 - (id)viewWithTag:(NSInteger)aTag;
 ```
 
-Not Preferred :- 
+**Not Preferred :- **
 
 ``` objective-c
 - (id)taggedView:(int)aTag;
@@ -310,13 +310,13 @@ Not Preferred :-
 
 * Don’t use “and” to link keywords that are attributes of the receiver.
 
-Preferred :-
+**Preferred :-**
 
 ``` objective-c
 - (int)runModalForDirectory:(NSString *)path file:(NSString *) name types:(NSArray *)fileTypes;
 ```
 
-Not Preferred :-
+**Not Preferred :-**
 
 ``` objective-c
 - (id)taggedView:(int)aTag;
@@ -324,7 +324,7 @@ Not Preferred :-
 
 * If the method describes two separate actions, use “and” to link them.
 
-Example :-
+**Example :-**
 
 ``` objective-c
 - (BOOL)openFile:(NSString *)fullPath withApplication:(NSString *)appName andDeactivate:(BOOL)flag;
@@ -340,7 +340,7 @@ Example :-
 - (void)setNoun:(type)aNoun;
 ```
 
-Example :-
+**Example :-**
 ```	
 	- (NSString *)title;
 	- (void)setTitle:(NSString *)aTitle;
@@ -373,14 +373,14 @@ Example :-
 
 * Don’t twist a verb into an adjective by using a participle:
 
-* Preferred :-
+**Preferred :-**
 
 ``` objective-c
 - (void)setAcceptsGlyphInfo:(BOOL)flag;
 - (BOOL)acceptsGlyphInfo;
 ```
 
-Not Preferred :- 
+**Not Preferred :- **
 
 ``` objective-c
 - (void)setGlyphInfoAccepted:(BOOL)flag;
@@ -433,7 +433,7 @@ Example :-
 
 * Private properties should be used in place of instance variables whenever possible. Although using instance variables is a valid way of doing things, by agreeing to prefer properties our code will be more consistent.
 
-Preferred -
+**Preferred -**
 
 ``` objective-c
 
@@ -445,7 +445,7 @@ Preferred -
 
 ```
 
-Not Preferred -
+**Not Preferred -**
 
 ``` objective-c
 
@@ -489,7 +489,7 @@ For example:
 
 * NSString, NSDictionary, NSArray, and NSNumber literals should be used whenever creating immutable instances of those objects. Pay special care that nil values not be passed into NSArrayand NSDictionary literals, as this will cause a crash.
 
-Preferred:
+**Preferred:**
 
 ``` objective-c 
 
@@ -500,7 +500,7 @@ NSNumber *buildingStreetNumber = @10018;
 
 ```
 
-Not Preferred:
+**Not Preferred:**
 
 ``` objective-c
 
@@ -514,7 +514,7 @@ NSNumber *buildingStreetNumber = [NSNumber numberWithInteger:10018];
 
 * Constants are preferred over in-line string literals or numbers, as they allow for easy reproduction of commonly used variables and can be quickly changed without the need for find and replace. Constants should be declared as static constants and not #defines unless explicitly being used as a macro.
 
-Preferred:
+**Preferred:**
 
 ``` objective-c
 static NSString * const ZBTAboutViewControllerCompanyName = @"Zapbuild";
@@ -522,7 +522,7 @@ static NSString * const ZBTAboutViewControllerCompanyName = @"Zapbuild";
 static CGFloat const ZBTImageThumbnailHeight = 50.0;
 ```
 
-Not Preferred:
+**Not Preferred:**
 
 ``` objective-c
 #define CompanyName @"Zapbuild"
@@ -575,7 +575,7 @@ Since nil resolves to NO it is unnecessary to compare it in conditions.
 * Never compare something directly to YES, because YES is defined to 1 and a BOOL can be up to 8 bits.
 * If the name of a BOOL property is expressed as an adjective, the property can omit the “is” prefix but specifies the conventional name for the get accessor, for example:
 
-Preferred:
+**Preferred:**
 
 ``` objective-c
 
@@ -583,7 +583,7 @@ if (someObject) {}
 if (![anotherObject boolValue]) {}
 
 ```
-Not Preferred:
+**Not Preferred:**
 
 ``` objective-c
 
@@ -597,7 +597,7 @@ if (isAwesome == true) {} // Never do this.
 ## 1.18. Golden Path
 * When coding with conditionals, the left hand margin of the code should be the "golden" or "happy" path. That is, don't nest if statements. Multiple return statements are OK.
 
-Preferred:
+**Preferred:**
 
 ``` objective-c
 - (void)someMethod {
@@ -609,7 +609,7 @@ Preferred:
 }
 ```
 
-Not Preferred:
+**Not Preferred:**
 
 ``` objective-c
 
@@ -625,7 +625,7 @@ Not Preferred:
 ## 1.19. Error Handling
 * When methods return an error parameter by reference, switch on the returned value, not the error variable.
 
-For example:
+**For example:**
 
 ``` objective-c
 
@@ -636,7 +636,7 @@ if (![self trySomethingWithError:&error]) {
 
 ```
 
-Not:
+**Not:**
 
 ``` objective-c
 
@@ -656,7 +656,7 @@ if (error) {
 * When accessing the x, y, width, or height of a CGRect, always use the CGGeometry functionsinstead of direct struct member access. From Apple's CGGeometry reference:
 * All functions described in this reference that take CGRect data structures as inputs implicitly standardize those rectangles before calculating their results. For this reason, your applications should avoid directly reading and writing the data stored in the CGRect data structure. Instead, use the functions described here to manipulate rectangles and to retrieve their characteristics.
 
-Preferred :
+**Preferred :**
 
 ``` objective-c
 CGRect frame = self.view.frame;
@@ -667,7 +667,7 @@ CGFloat width = CGRectGetWidth(frame);
 CGFloat height = CGRectGetHeight(frame);
 ```
 
-Not Preferred :
+**Not Preferred :**
 
 ``` objective-c
 CGRect frame = self.view.frame;

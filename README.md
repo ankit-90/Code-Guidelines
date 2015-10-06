@@ -1,6 +1,4 @@
-# Code-Guidelines
-Guidelines for developing iOS and Android based apps 
+## Code-Guidelines
 
-[Android GuideLines](Android/android.md)
-
-[iOS GuideLines](iOS/ios.md)
+- [Android GuideLines](Android/android.md)
+- [iOS GuideLines](iOS/ios.md)
